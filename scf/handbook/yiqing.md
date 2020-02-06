@@ -17,7 +17,7 @@
 
 学习完后，请创建一个名为 `yiqing` 的云函数。
 
-4. 在[https://github.com/lcxfs1991/tencentcloudcourse](https://github.com/lcxfs1991/tencentcloudcourse)下载本课程的代码包，目录是 `scr/yiqing`，并将里面的代码覆盖刚才新创建的`yiqing`云函数中的文件。然后在命令行运行`npm i`。
+4. 在[https://github.com/lcxfs1991/tencentcloudcourse](https://github.com/lcxfs1991/tencentcloudcourse)下载本课程的代码包，目录是 `scr/yiqing`，并将里面的代码覆盖刚才新创建的`yiqing`云函数中的文件。然后在该目录中命令行运行`npm i`，安装代码包的依赖。
 
 ## 效果预览
 
