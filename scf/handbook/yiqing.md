@@ -51,7 +51,11 @@ let html = fs.readFileSync(path.resolve(__dirname, './index.html'), {
   encoding: 'utf-8'
 });
 html = render(html, { disease_data: result.data.data, china_map });
+```
 
+除此以外，由于后面创建网关的时候，要使用网关的集成响应，因此必须按照以下的格式对云函数进行输出，而不能直接返回一段数据。
+
+```js
 if (!api) {
   return {
     isBase64Encoded: false,
