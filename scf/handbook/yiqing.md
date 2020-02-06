@@ -17,7 +17,7 @@
 
 学习完后，请创建一个名为 `yiqing` 的云函数。
 
-4. 在[https://github.com/lcxfs1991/tencentcloudcourse](https://github.com/lcxfs1991/tencentcloudcourse)下载本课程的代码包，目录是 `scr/yiqing`，并将里面的代码覆盖刚才新创建的`yiqing`云函数中的文件。
+4. 在[https://github.com/lcxfs1991/tencentcloudcourse](https://github.com/lcxfs1991/tencentcloudcourse)下载本课程的代码包，目录是 `scr/yiqing`，并将里面的代码覆盖刚才新创建的`yiqing`云函数中的文件。然后在命令行运行`npm i`。
 
 ## 效果预览
 
@@ -172,4 +172,17 @@ setInterval(function() {
 
 ![添加API网关触发器](https://user-images.githubusercontent.com/3348398/73863542-37a5a000-487b-11ea-9961-ecd34f709f6b.png)
 
-创建完毕后，可以 API 网关触发器中，拿到访问路径路径，在浏览器中进行访问。
+创建完毕后，可以 API 网关触发器中，拿到访问路径路径，在浏览器中进行访问。如果验证过没问题后，建议将云函数，通过`VS Code`插件同步下来，将旧的`template.yaml`文件替换掉，这样避免下次上传云函数的时候，生成重复的 API 网关触发器。只有像下面的`Events`触发事件那样，将系统生成的网关贴上去，才不会重复生成新的网关，造成资源浪费。
+
+````yaml
+Events:
+  service-8lqamcni:
+    Type: APIGW
+    Properties:
+      Enable: true
+      StageName: release
+      ServiceId:
+      HttpMethod: GET
+      IntegratedResponse: true
+        ```
+````
