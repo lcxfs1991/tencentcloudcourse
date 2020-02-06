@@ -190,3 +190,5 @@ Events:
       IntegratedResponse: true
         ```
 ````
+
+体验地址：[疫情地图体验](https://service-lltf3zya-1253970226.gz.apigw.tencentcs.com/release/demo_yiqing)
