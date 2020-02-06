@@ -158,7 +158,7 @@ setInterval(function() {
 }, 60000);
 ```
 
-需要简单说明的是，该模板是使用了`EChart`的模板进行改造，模板地址如下：https://www.echartsjs.com/examples/zh/editor.html?c=map-usa，下图是模板的效果。你也可以点击该模板右下角的`Download`按钮将模板的`html`文件下载下来，然后按自己的喜欢进行编辑改造。
+需要简单说明的是，该模板是使用了`EChart`的模板进行改造，模板地址如下：[https://www.echartsjs.com/examples/zh/editor.html?c=map-usa](https://www.echartsjs.com/examples/zh/editor.html?c=map-usa)，下图是模板的效果。你也可以点击该模板右下角的`Download`按钮将模板的`html`文件下载下来，然后按自己的喜欢进行编辑改造。
 
 ![疫情地图的模板](https://user-images.githubusercontent.com/3348398/73943593-fae5b180-492b-11ea-859e-bdb0f49e3cde.png)
 
