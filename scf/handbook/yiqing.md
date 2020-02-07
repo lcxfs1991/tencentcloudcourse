@@ -192,3 +192,23 @@ Events:
 ````
 
 体验地址：[疫情地图体验](https://service-lltf3zya-1253970226.gz.apigw.tencentcs.com/release/demo_yiqing)
+
+## 任务四 添加自定义域名
+
+如果觉得网关提供的域名过长，又或者担心这种域名由于安全问题会被微信等大平台封禁，可以自己自行配置自定义域名。首先，在云函数`yiqing`的控制台面板里，找到【触发方式】，然后点击任务三中添加过的触发器里的【API 服务名】，进入更详细的网关配置控制台。
+
+![进入网关配置控制台](https://user-images.githubusercontent.com/3348398/74046219-1e325e80-4a09-11ea-9473-397b02e27821.png)
+
+进入【自定义域名】菜单，新建自定义域名，如果想配置 HTTPS 协议，则需要去申请 HTTPS 证书（腾讯云有免费的可以申请，可以跟着提示跳转到证书配置菜单）。
+
+![自定义域名菜单](https://user-images.githubusercontent.com/3348398/74046446-8c772100-4a09-11ea-92db-8e597dcf05b4.png)
+
+可以按照下图的示例进行配置。要注意的是，如果想访问的路径更扁平化一点，请选择“自定义路径映射”，路径填入`/`，环境选择发布。如果不这样配置，如果原本网关的域名是[https://service-lltf3zya-1253970226.gz.apigw.tencentcs.com/release/demo_yiqing](https://service-lltf3zya-1253970226.gz.apigw.tencentcs.com/release/demo_yiqing)，那么配置好之后，访问的路径就是[https://yiqing.docschina.org/release/demo_yiqing]。但如果配置了`/`，那么后面的路径就只剩下`demo_yiqing`了。
+
+![新建自定义域名](https://user-images.githubusercontent.com/3348398/74046578-c21c0a00-4a09-11ea-846b-e1393e3f8106.png)
+
+在保存配置信息之前，请首先在域名解析服务商，根据弹窗的提示，先把域名的 CNAME 配置好。比如这里使用的是[https://yiqing.docschina.org](https://yiqing.docschina.org)，域名，提示要 CNAME 到`service-lltf3zya-1253970226.gz.apigw.tencentcs.com.`。做完 CNAME 后，就可以保存自定义域名的添加配置。稍等片刻，就可以访问了。
+
+![配置域名解析](https://user-images.githubusercontent.com/3348398/74046843-3b1b6180-4a0a-11ea-9a3c-daef71f701f1.png)
+
+如果看到配置列表上显示“解析成功”，那表明一切的陪着已经妥当，请尝试访问：[https://yiqing.docschina.org/demo_yiqing](https://yiqing.docschina.org/demo_yiqing)进行体验吧！
