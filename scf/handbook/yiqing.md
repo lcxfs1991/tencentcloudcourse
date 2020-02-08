@@ -40,7 +40,7 @@ let api = event.queryString.api || false;
 
 // 2. 请求疫情数据
 let result = await axios.get(
-  `https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5}`
+  `https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5`
 );
 
 // 3. 中国地图数据
