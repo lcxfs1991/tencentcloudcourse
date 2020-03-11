@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>出租车发票报销Web应用</title>
+  </head>
+  <style>
+    .form {
+      display: block;
+      width: 210px;
+      margin: auto;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+    }
+
+    .form div {
+      margin: 10px;
+    }
+
+    .form button {
+      border: none;
+      background-color: #1890ff;
+      outline: 0;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+
+    #invoice {
+      width: 210px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <form class="form" name="form" enctype="multipart/form-data">
+      <div>
+        <input id="file" name="file" type="file" />
+      </div>
+      <div>
+        <button id="submit">提交</button>
+      </div>
+    </form>
+
+    <div id="invoice">
+      <div id="invoiceNum"></div>
+      <div id="invoiceCode"></div>
+      <div id="invoiceDate"></div>
+      <div id="invoiceDuration"></div>
+      <div id="invoiceDistance"></div>
+      <div id="invoiceFare"></div>
+    </div>
+
+    <script>
+      let submitButton = document.getElementById('submit');
+      let invoiceTable = document.getElementById('invoice');
+
+      submitButton.addEventListener('click', e => {
+        e.preventDefault();
+        submitButton.innerText = '解析中...';
+
+        // 补全解析文件内容并上传的逻辑
+
+        req.onreadystatechange = state => {
+          if (req.readyState === 4) {
+            submitButton.innerText = '提交';
+            let data = JSON.parse(req.responseText);
+            console.log(data);
+
+            if (!data.code) {
+              document.getElementById(
+                'invoiceNum'
+              ).innerText = `发票代码：${data.data.InvoiceNum}`;
+              document.getElementById(
+                'invoiceCode'
+              ).innerText = `发票号码：${data.data.InvoiceCode}`;
+              document.getElementById(
+                'invoiceDate'
+              ).innerText = `发票日期：${data.data.Date}`;
+              document.getElementById(
+                'invoiceDuration'
+              ).innerText = `上下车时间：${data.data.GetOnTime}-${data.data.GetOffTime}`;
+              document.getElementById(
+                'invoiceDistance'
+              ).innerText = `发票日期：${data.data.Distance}`;
+              document.getElementById(
+                'invoiceFare'
+              ).innerText = `发票日期：${data.data.Fare}`;
+            }
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

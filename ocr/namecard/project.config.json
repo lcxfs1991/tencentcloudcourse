@@ -1,0 +1,48 @@
+{
+	"description": "description",
+	"packOptions": {
+		"ignore": [
+			"server",
+			"cloud",
+			"tcb.json"
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxcf5102ada68a7ac9",
+	"projectname": "名片识别小程序",
+	"isGameTourist": false,
+	"miniprogramRoot": "client/",
+	"cloudfunctionRoot": "cloud/functions/",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}
