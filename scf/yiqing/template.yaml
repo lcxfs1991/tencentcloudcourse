@@ -1,7 +1,7 @@
 Resources:
   default:
     Type: 'TencentCloud::Serverless::Namespace'
-    test:
+    yiqing:
       Properties:
         CodeUri: ./
         Description: This is a template function
